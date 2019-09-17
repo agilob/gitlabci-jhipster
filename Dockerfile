@@ -1,4 +1,4 @@
-FROM gradle:jdk12
+FROM gradle:jdk11
 MAINTAINER dockerhub@agilob.net
 
 USER root
