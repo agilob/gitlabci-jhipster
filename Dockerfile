@@ -1,10 +1,10 @@
-FROM gradle:jdk14
+FROM gradle:jdk8
 
 USER root
 RUN  curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
 	 apt-get install -y nodejs \
-		build-essential chrpath libssl-dev libxft-dev \
-		libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev --no-install-recommends && \
+		build-essential chrpath libssl-dev maven libxft-dev \
+		libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev maven --no-install-recommends && \
 	export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64" && \
 	wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2 && \
 	tar xvjf $PHANTOM_JS.tar.bz2 && \
