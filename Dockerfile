@@ -1,8 +1,8 @@
 FROM gradle:jdk14
 
 USER root
-RUN  curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
-	 apt-get install -y nodejs \
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+	apt-get install -y nodejs \
 		build-essential chrpath libssl-dev libxft-dev \
 		libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev maven --no-install-recommends && \
 	export PHANTOM_JS="phantomjs-1.9.8-linux-x86_64" && \
