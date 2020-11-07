@@ -1,4 +1,4 @@
-FROM gradle:jdk14
+FROM gradle:jdk15
 
 USER root
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
